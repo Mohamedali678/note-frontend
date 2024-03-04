@@ -17,7 +17,7 @@ function AddNote(){
 
         event.preventDefault()
 
-        axios.post("http://localhost:1000/api/create", {
+        axios.post("https://note-backend-460v.onrender.com/api/create", {
             "title": title,
             "description": description
         }).then(() => {

@@ -14,7 +14,7 @@ function Home(){
     const [notes, setNotes] = useState([])
 
     const getAllNotes = () => {
-        axios.get("http://localhost:1000/notes").then((response) => {
+        axios.get("https://note-backend-460v.onrender.com/notes").then((response) => {
                 setNotes(response.data)
         }).catch((error) => {
             console.log(error)
@@ -29,7 +29,7 @@ function Home(){
 
     const deleteNote = (id) => {
 
-        axios.delete(`http://localhost:1000/note/delete/${id}`).then(() => {
+        axios.delete(`https://note-backend-460v.onrender.com/${id}`).then(() => {
             toast("Note deleted successfully", {
                 position: "top-right",
                 hideProgressBar: false,

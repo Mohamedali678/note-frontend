@@ -19,7 +19,7 @@ function UpdateForm(){
     const getSingleData = () => {
         
         
-        axios.get(`http://localhost:1000/note/single/${params.id}`).then((response) => {
+        axios.get(`https://note-backend-460v.onrender.com/note/single/${params.id}`).then((response) => {
            setTitle(response.data.title)
             setDescription(response.data.description)           
         }).catch((error) => {
